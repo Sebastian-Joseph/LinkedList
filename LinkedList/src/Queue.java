@@ -6,6 +6,9 @@
      int rear;
      int cap;
      int count;
+     int priority;
+
+
 
      Queue(int size) {
           arr = new int[size];
@@ -13,14 +16,17 @@
           front = 0;
           rear = -1;
           count = 1;
+          priority = 10;
      }
       public Boolean isEmpty() {
            return (size() == 0);
       }
 
       public Boolean isFull() {
-          return (size() == cap);
+
+         return (size() == cap);
       }
+
      public void dequeue() {
           if(isEmpty()) {
                System.out.println("Terminated");
@@ -41,6 +47,7 @@
           rear = (rear + 1) % cap;
           arr[rear] = thing;
           count++;
+
      }
      public int peek() {
           if(isEmpty()) {
@@ -53,6 +60,14 @@
 
          return count;
      }
+
+
+public void Prior() {
+for (int i = 0; i > arr[size()];) {
+    
+    }
+}
+
       public static void main (String[] args) {
           Queue spunchbop = new Queue(6);
 
@@ -64,6 +79,8 @@
 
           System.out.println("Front: " + spunchbop.peek());
           spunchbop.dequeue();
+          spunchbop.dequeue();
+
           System.out.println("New Front: " + spunchbop.peek());
           System.out.println("Size: " + spunchbop.size());
       }
