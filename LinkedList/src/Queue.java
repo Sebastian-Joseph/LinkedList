@@ -9,6 +9,7 @@
 
      Queue(int size) {
           arr = new int[size];
+          cap = size;
           front = 0;
           rear = -1;
           count = 1;
@@ -49,19 +50,22 @@
           return arr[front];
      }
      public int size() {
-          return count;
+
+         return count;
      }
       public static void main (String[] args) {
-          Queue spunchbop = new Queue(4);
+          Queue spunchbop = new Queue(6);
 
           spunchbop.enqueue(2);
           spunchbop.enqueue(4);
           spunchbop.enqueue(6);
           spunchbop.enqueue(8);
+          spunchbop.enqueue(10);
 
           System.out.println("Front: " + spunchbop.peek());
           spunchbop.dequeue();
           System.out.println("New Front: " + spunchbop.peek());
+          System.out.println("Size: " + spunchbop.size());
       }
 
  }
