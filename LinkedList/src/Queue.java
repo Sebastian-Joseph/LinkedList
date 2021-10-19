@@ -7,10 +7,10 @@ class Queue {
      int rear;
      int cap;
      int count;
+    private Object prior;
 
 
-
-     Queue(int size) {
+    Queue(int size) {
           arr = new int[size];
           cap = size;
           front = 0;
@@ -66,21 +66,21 @@ if  (isFull()) {
     System.out.println("Terminated");
     System.exit(1);
     }
-    System.out.println("Priority: ");
+    System.out.println("Priority: " + fhing );
     front = (front + 1) % cap;
     arr[front] = fhing;
     count++;
 }
 
       public static void main (String[] args) {
-          Queue spunchbop = new Queue(6);
+          Queue spunchbop = new Queue(7);
 
           spunchbop.enqueue(2);
           spunchbop.enqueue(4);
           spunchbop.enqueue(6);
           spunchbop.enqueue(8);
           spunchbop.enqueue(10);
-          spunchbop.prior
+          spunchbop.prior(12);
 
           System.out.println("Front: " + spunchbop.peek());
           spunchbop.dequeue();
