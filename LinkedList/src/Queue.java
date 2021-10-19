@@ -1,4 +1,5 @@
- class Queue {
+
+class Queue {
 
 
      int[] arr;
@@ -6,7 +7,6 @@
      int rear;
      int cap;
      int count;
-     int priority;
 
 
 
@@ -16,7 +16,6 @@
           front = 0;
           rear = -1;
           count = 1;
-          priority = 10;
      }
       public Boolean isEmpty() {
            return (size() == 0);
@@ -62,10 +61,15 @@
      }
 
 
-public void Prior() {
-for (int i = 0; i > arr[size()];) {
-    
+public void prior(int fhing) {
+if  (isFull()) {
+    System.out.println("Terminated");
+    System.exit(1);
     }
+    System.out.println("Priority: ");
+    front = (front + 1) % cap;
+    arr[front] = fhing;
+    count++;
 }
 
       public static void main (String[] args) {
@@ -76,6 +80,7 @@ for (int i = 0; i > arr[size()];) {
           spunchbop.enqueue(6);
           spunchbop.enqueue(8);
           spunchbop.enqueue(10);
+          spunchbop.prior
 
           System.out.println("Front: " + spunchbop.peek());
           spunchbop.dequeue();
